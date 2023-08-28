@@ -6,8 +6,8 @@ const floatingImg = document.querySelector('.floating-img')
 console.log(texts, spaces);
 console.log(mainImg);
 
-gsap.fromTo(texts, {width: '100%', backgroundColor: '#f4f4f4'},
-{width: 0, duration: 1.6, ease: 'power2.inOut', stagger: 0.2,
+gsap.fromTo(texts, {width: '100%', delay: 2, backgroundColor: '#f4f4f4'},
+{width: 0, duration: 2, ease: 'power2.inOut', stagger: 0.2,
 onComplete: () => {
     gsap.to(texts, {width: '100%', backgroundColor: 'transparent',duration: 2, ease: 'power2.inOut', stagger: 0.2})
     gsap.to(spaces, {backgroundColor: '#f4f4f4'})

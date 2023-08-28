@@ -18,6 +18,15 @@
     }
 }
 
+@keyframes scrollText{
+    from{
+        transform: translateX(0.4em);
+    }
+    to{
+        transform: translateX(-100%) ;
+    }
+}
+
 html, body{
     height: 100%;
     width: 100%;
@@ -25,7 +34,8 @@ html, body{
 
 .wrapper{
     height: 100%;
-    width: 100%;
+    /* width: 100%; */
+    overflow: hidden;
     background-color: var(--grey);
     display: flex;
     position: relative;
@@ -142,11 +152,11 @@ nav img{
 .vertical-text{
     position: absolute;
     /* width: 100%; */
-    /* background-color: green; */
     transform: rotate(90deg);
     transform-origin: 0% 0%;
-    right: -53%;
-    top: -10%;
+    display: flex;
+    right: -110%;
+    top: 0;
     z-index: 1;
 }
 
@@ -154,8 +164,11 @@ nav img{
     font-size: 5.5rem;
     letter-spacing: .1em;
     font-weight: 300;
+    white-space: nowrap;
+    margin-right: .4em;
     color: transparent;
     -webkit-text-stroke-width: .01em;
     -webkit-text-stroke-color: var(--gray);
-    
+    animation: scrollText 9s linear infinite;
+
 }

@@ -5,6 +5,19 @@
     box-sizing: border-box;
 }
 
+:root{
+    --grey: #2e2f32;
+    --light-gray: #A7A7A7;
+    --gray: #f4f4f4;
+    --biege: #F7F2EF;
+}
+
+@keyframes rots{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 html, body{
     height: 100%;
     width: 100%;
@@ -13,4 +26,136 @@ html, body{
 .wrapper{
     height: 100%;
     width: 100%;
+    background-color: var(--grey);
+    display: flex;
+    position: relative;
+}
+
+nav{
+    position: absolute;
+    width: 35em;
+    left: 5%;
+    top: 5%;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--gray);
+}
+nav h5{
+    letter-spacing: .2em;
+    font-weight: 100;
+}
+nav img{
+    width: 7em;
+    animation: rots 4s linear infinite 5s;
+}
+.overlay-noise{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/pierre-bamin-_EzTds6Fo44-unsplash.jpg);
+    background-size: 30% 30%;
+    background-blend-mode: multiply;
+    pointer-events: none;
+    opacity: .09;
+}
+.section-1{
+    height: 100%;
+    width: 25%;
+   
+}
+.section-2{
+    height: 100%;
+    width: 67%;
+    background-image: url(./images/curology-6CJg-fOTYs4-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 23, 37, 0.432);
+}
+.section-3{
+    height: 100%;
+    width: 8%;
+}
+
+.text-content{
+    /* height: 19em; */
+    position: absolute;
+    width: 38em;
+    /* background-color: red; */
+    top: 50%;
+    left: 5%;
+    transform: translate(0,-37%);
+}
+
+.text-content h1{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 6.25rem;
+    font-weight: 547;
+    line-height: 1;
+    color: var(--gray);
+    -webkit-text-stroke-width: .1em;
+    letter-spacing: .11em;
+    text-transform: uppercase;
+    /* background-color: var(--gray); */
+    margin-bottom: .06em;
+}
+
+.text-content h1 span{
+    width: 2em;
+    height: 100%;
+    /* background-color: var(--gray); */
+}
+
+.floating-img{
+    width: 24em;
+    height: 28em;
+    position: absolute;
+    /* z-index: 2; */
+    right: 3%;
+    top: 20%;
+    /* filter: saturate(100%); */
+    background-image: url(./images/martin-pechy-bpg-ngqrPc8-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    /* visibility: hidden; */
+
+}
+
+/* .overlay-small{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 23, 37, 0.15);
+} */
+
+.vertical-text{
+    position: absolute;
+    /* width: 100%; */
+    /* background-color: green; */
+    transform: rotate(90deg);
+    transform-origin: 0% 0%;
+    right: -53%;
+    top: -10%;
+    z-index: 1;
+}
+
+.vertical-text h1{
+    font-size: 5.5rem;
+    letter-spacing: .1em;
+    font-weight: 300;
+    color: transparent;
+    -webkit-text-stroke-width: .01em;
+    -webkit-text-stroke-color: var(--gray);
+    
 }

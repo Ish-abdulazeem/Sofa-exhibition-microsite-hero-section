@@ -43,12 +43,13 @@ html, body{
 
 nav{
     position: absolute;
-    width: 35em;
+    /* width: 35em; */
     left: 5%;
     top: 5%;
     z-index: 5;
     display: flex;
-    justify-content: space-between;
+    gap: 3em;
+    /* justify-content: space-between; */
     align-items: center;
     color: var(--gray);
 }
@@ -79,7 +80,7 @@ nav img{
 }
 .section-2{
     height: 100%;
-    width: 67%;
+    width: 0;
     background-image: url(./images/curology-6CJg-fOTYs4-unsplash.jpg);
     background-size: cover;
     background-position: center;
@@ -118,6 +119,7 @@ nav img{
     -webkit-text-stroke-width: .1em;
     letter-spacing: .11em;
     text-transform: uppercase;
+    transition: background-color 0.5s;
     /* background-color: var(--gray); */
     margin-bottom: .06em;
 }
@@ -129,7 +131,7 @@ nav img{
 }
 
 .floating-img{
-    width: 24em;
+    width: 0;
     height: 28em;
     position: absolute;
     /* z-index: 2; */
@@ -153,10 +155,10 @@ nav img{
     position: absolute;
     /* width: 100%; */
     transform: rotate(90deg);
-    transform-origin: 0% 0%;
-    display: flex;
-    right: -110%;
+    transform-origin: 0% 90%;
+    right: -10%;
     top: 0;
+    left: 90%;
     z-index: 1;
 }
 
@@ -169,6 +171,4 @@ nav img{
     color: transparent;
     -webkit-text-stroke-width: .01em;
     -webkit-text-stroke-color: var(--gray);
-    animation: scrollText 9s linear infinite;
-
 }
